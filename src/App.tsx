@@ -5,6 +5,7 @@ import {
   Expertise,
   Project,
   Highlights,
+  Certifications,
   Connect,
   Navigation,
   Footer,
@@ -36,6 +37,7 @@ function App() {
             <Timeline/>
             <Project/>
             <Highlights/>
+            <Certifications/>
             <Connect/>
         </FadeIn>
         <Footer />

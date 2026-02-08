@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SchoolIcon from '@mui/icons-material/School';
 import '../assets/styles/Main.scss';
 import avatar from "../assets/images/avatar.jpeg";
 
 const INTRO_TEXT = "An AI/ML Engineer who builds products across ML Systems, Computer Vision, NLP, and Generative AI, with a focus on solving real user problems.\n\nI enjoy translating complex, loosely defined problems into structured, scalable AI solutions where the impact is visible.";
-const TYPING_MS = 35;
+const TYPING_MS = 18;
 const PAUSE_AT_END_MS = 2500;
 const PAUSE_AT_START_MS = 800;
 
@@ -57,8 +58,9 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer" aria-label="GitHub"><GitHubIcon/></a>
+            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon/></a>
+            <a href="https://scholar.google.com/citations?user=xof8C5gAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar"><SchoolIcon/></a>
           </div>
           <h1>Ayushi Chakrabarty</h1>
           <div className="typing-intro">
@@ -74,8 +76,9 @@ function Main() {
           </div>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer" aria-label="GitHub"><GitHubIcon/></a>
+            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon/></a>
+            <a href="https://scholar.google.com/citations?user=xof8C5gAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar"><SchoolIcon/></a>
           </div>
         </div>
       </div>

@@ -5,4 +5,5 @@ export { default as Expertise } from "./Expertise";
 export { default as Timeline } from "./Timeline";
 export { default as Project } from "./Project";
 export { default as Highlights } from "./Highlights";
+export { default as Certifications } from "./Certifications";
 export { default as Connect } from "./Connect";

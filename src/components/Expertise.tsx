@@ -89,8 +89,10 @@ function Expertise() {
         <h1>Expertise</h1>
         <div className="skills-grid">
           <div className="skill">
-            <FontAwesomeIcon icon={faPython} size="3x" />
-            <h3>Programming</h3>
+            <div className="skill-header">
+              <FontAwesomeIcon icon={faPython} size="3x" />
+              <h3>Programming</h3>
+            </div>
             <p>Strong foundation in multiple languages for research, automation, and production systems.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -101,8 +103,10 @@ function Expertise() {
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faBrain} size="3x" />
-            <h3>Machine Learning & AI</h3>
+            <div className="skill-header">
+              <FontAwesomeIcon icon={faBrain} size="3x" />
+              <h3>Machine Learning & AI</h3>
+            </div>
             <p>Building and deploying scalable ML systems—from classical models to deep learning and resource-efficient inference.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -113,8 +117,10 @@ function Expertise() {
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faWandMagicSparkles} size="3x" />
-            <h3>Generative AI, NLP & Agents</h3>
+            <div className="skill-header">
+              <FontAwesomeIcon icon={faWandMagicSparkles} size="3x" />
+              <h3>Generative AI, NLP & Agents</h3>
+            </div>
             <p>Fine-tuning LLMs, RAG pipelines, multi-agent systems, and AI-powered tools with LangChain, LangGraph, and OpenAI.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -125,8 +131,10 @@ function Expertise() {
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faCloud} size="3x" />
-            <h3>Data, Cloud & DevOps</h3>
+            <div className="skill-header">
+              <FontAwesomeIcon icon={faCloud} size="3x" />
+              <h3>Data, Cloud & DevOps</h3>
+            </div>
             <p>End-to-end pipelines, visualization, and deployment on AWS, GCP, and Azure with Docker and CI/CD. Hardware optimization for edge and low-resource deployment.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -140,8 +148,10 @@ function Expertise() {
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faCode} size="3x" />
-            <h3>Software Development</h3>
+            <div className="skill-header">
+              <FontAwesomeIcon icon={faCode} size="3x" />
+              <h3>Software Development</h3>
+            </div>
             <p>Full-stack and rapid prototyping with Streamlit, web technologies, and agile methodologies.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>

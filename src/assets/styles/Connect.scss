@@ -1,6 +1,6 @@
 .connect-section {
-  padding: 5% 10% 3%;
-  background: linear-gradient(135deg, #0d1116 0%, #1a1a2e 50%, #16213e 100%);
+  padding: clamp(2rem, 5%, 4rem) 0 clamp(2rem, 3%, 3rem);
+  background: linear-gradient(160deg, #0d1116 0%, #131720 40%, #1a1a2e 70%, #16213e 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -24,7 +24,8 @@
 
 .connect-content {
   max-width: 36em;
-  text-align: left;
+  text-align: center;
+  margin: 0 auto;
 
   h1 {
     margin-bottom: 0.35em;
@@ -32,12 +33,12 @@
 }
 
 .connect-tagline {
-  font-size: 1.15em;
+  font-size: clamp(1rem, 2.5vw, 1.15em);
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0.75em;
   opacity: 0.95;
-  line-height: 1.7;
+  line-height: 1.75;
   min-height: 2.5em;
 }
 
@@ -65,14 +66,13 @@
   opacity: 0.9;
 }
 
-/* Blue curved button with "Email me" text inside */
-#connect .connect-email,
-.connect-section .connect-email {
+/* Email me button - visible pill button */
+.connect-email {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 1.05em;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
   padding: 0.75em 1.75em;
@@ -81,17 +81,36 @@
   color: white !important;
   -webkit-text-fill-color: white !important;
   text-decoration: none !important;
-  transition: background-color 0.2s, transform 0.2s;
   border: none;
   cursor: pointer;
-  min-height: 2.5em;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(30, 136, 229, 0.35);
+  margin-top: 0.5rem;
 }
 
-#connect .connect-email:hover,
-.connect-section .connect-email:hover {
+.connect-email:hover {
   background-color: #1976d2 !important;
   color: white !important;
   -webkit-text-fill-color: white !important;
-  text-decoration: none !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .connect-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .connect-content {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .connect-tagline {
+    font-size: 0.95rem;
+  }
+  .connect-message {
+    font-size: 0.95rem;
+  }
 }
