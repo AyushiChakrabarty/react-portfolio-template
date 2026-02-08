@@ -7,42 +7,119 @@
 .contact-form {
   padding-top: 20px;
 
-  button {
+  .contact-submit {
     float: right;
-    background-color: white;
-    color: #050f0b;
+    background-color: white !important;
+    color: #050f0b !important;
   }
 
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
+  .contact-submit:hover {
+    background-color: #1e88e5 !important;
+    color: white !important;
   }
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+.contact-field {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-family: "Lato", sans-serif;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 14px;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    color: #0d1116;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+    caret-color: #0d1116;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #666;
+  }
+
+  input:hover,
+  textarea:hover {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #1e88e5;
+    border-width: 2px;
+    padding: 13px 13px; /* compensate for border */
+  }
+
+  input.error,
+  textarea.error {
+    border-color: #d32f2f;
+  }
+
+  .contact-helper {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    font-family: "Lato", sans-serif;
+
+    &.error {
+      color: #d32f2f;
+    }
+  }
+}
+
+/* Dark mode: labels and helper text visible on dark background */
+#contact .contact-field label {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+#contact .contact-field .contact-helper:not(.error) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.light-mode #contact .contact-field label {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.light-mode #contact .contact-field .contact-helper:not(.error) {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .form-flex {
   display: flex;
   gap: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
-.form-flex .MuiFormControl-root {
+.form-flex .contact-field {
+  flex: 1;
+}
+
+.body-form {
   width: 100%;
+  margin-bottom: 15px;
 }
 
 form {
   width: 100% !important;
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+.body-form textarea {
+  min-height: 200px;
+  resize: vertical;
 }

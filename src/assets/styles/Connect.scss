@@ -1,0 +1,97 @@
+.connect-section {
+  padding: 5% 10% 3%;
+  background: linear-gradient(135deg, #0d1116 0%, #1a1a2e 50%, #16213e 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.light-mode .connect-section {
+  background: linear-gradient(
+    135deg,
+    #e8f4fc 0%,
+    #d6ebf9 25%,
+    #c5e2f7 50%,
+    #b3d9f4 75%,
+    #a8d4f2 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.connect-content {
+  max-width: 36em;
+  text-align: left;
+
+  h1 {
+    margin-bottom: 0.35em;
+  }
+}
+
+.connect-tagline {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  opacity: 0.95;
+  line-height: 1.7;
+  min-height: 2.5em;
+}
+
+.connect-tagline-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em);
+}
+
+.connect-tagline-visible .connect-tagline-word {
+  animation: tagline-reveal 0.6s ease-out forwards;
+}
+
+@keyframes tagline-reveal {
+  to {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
+
+.connect-message {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  opacity: 0.9;
+}
+
+/* Blue curved button with "Email me" text inside */
+#connect .connect-email,
+.connect-section .connect-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.75em 1.75em;
+  border-radius: 9999px;
+  background-color: #1e88e5 !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  min-height: 2.5em;
+}
+
+#connect .connect-email:hover,
+.connect-section .connect-email:hover {
+  background-color: #1976d2 !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}

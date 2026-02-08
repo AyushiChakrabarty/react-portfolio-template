@@ -1,27 +1,81 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Main.scss';
+import avatar from "../assets/images/avatar.jpeg";
+
+const INTRO_TEXT = "An AI/ML Engineer who builds products across ML Systems, Computer Vision, NLP, and Generative AI, with a focus on solving real user problems.\n\nI enjoy translating complex, loosely defined problems into structured, scalable AI solutions where the impact is visible.";
+const TYPING_MS = 35;
+const PAUSE_AT_END_MS = 2500;
+const PAUSE_AT_START_MS = 800;
 
 function Main() {
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const indexRef = useRef(0);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    if (!isDeleting) {
+      if (indexRef.current >= INTRO_TEXT.length) {
+        setIsPaused(true);
+        const t = setTimeout(() => {
+          setIsDeleting(true);
+          setIsPaused(false);
+        }, PAUSE_AT_END_MS);
+        return () => clearTimeout(t);
+      }
+      const timeout = setTimeout(() => {
+        indexRef.current += 1;
+        setDisplayText(INTRO_TEXT.slice(0, indexRef.current));
+      }, TYPING_MS);
+      return () => clearTimeout(timeout);
+    }
+
+    if (displayText.length === 0) {
+      setIsPaused(true);
+      indexRef.current = 0;
+      const t = setTimeout(() => {
+        setIsDeleting(false);
+        setIsPaused(false);
+      }, PAUSE_AT_START_MS);
+      return () => clearTimeout(t);
+    }
+    const timeout = setTimeout(() => {
+      setDisplayText((prev) => prev.slice(0, -1));
+    }, TYPING_MS);
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, isPaused]);
 
   return (
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          <img src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/avatar_circle.jpeg" alt="Avatar" />
+          <img src={avatar} alt="Avatar" />
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
-          <h1>Yuji Sato</h1>
-          <p>Full Stack Engineer</p>
+          <h1>Ayushi Chakrabarty</h1>
+          <div className="typing-intro">
+            <p className="main-intro main-intro-typing">
+              {displayText.split("\n\n").map((para, i) => (
+                <React.Fragment key={i}>
+                  {i > 0 && <><br /><br /></>}
+                  {para}
+                </React.Fragment>
+              ))}
+              <span className="typing-cursor" aria-hidden="true">|</span>
+            </p>
+          </div>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/AyushiChakrabarty" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://www.linkedin.com/in/ayushi-chakrabarty-7b504220b/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
         </div>
       </div>

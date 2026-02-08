@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-  color: #5000ca;
+  color: #1e88e5;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
@@ -104,7 +104,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   a:hover {
-    color: #5000ca;
+    color: #1e88e5;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   }
 
@@ -113,7 +113,19 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .about-section {
-    background-image: url("./assets/images/bg-light.png");
+    /* Sky bluish gradient for light mode main section */
+    background: linear-gradient(
+      135deg,
+      #e8f4fc 0%,
+      #d6ebf9 25%,
+      #c5e2f7 50%,
+      #b3d9f4 75%,
+      #a8d4f2 100%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 
   .skills-container svg {
@@ -152,4 +164,16 @@ p, a, h1, h2, h3, h4, h5, label, button {
       padding: 5% 5%;
     }
   }
+}
+
+/* Connect "Email me" button: ensure visible in both modes */
+#connect .connect-email {
+  background-color: #1e88e5 !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+#connect .connect-email:hover {
+  background-color: #1976d2 !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
 }

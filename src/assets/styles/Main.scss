@@ -10,7 +10,10 @@
     width: 100%;
     padding: 0px 15%;
     min-height: 700px;
-    background-image: url("../images/bg-dark.png");
+    /* Optional: use a solid color or gradient instead of an image */
+    background: linear-gradient(135deg, #0d1116 0%, #1a1a2e 50%, #16213e 100%);
+    /* To use an image again, uncomment below and remove the background line above: */
+    /* background-image: url("../images/bg-dark.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -40,6 +43,40 @@
         font-size: 1.5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
+    }
+
+    .main-intro {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+        max-width: 42em;
+    }
+
+    .main-intro:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .typing-intro {
+        max-width: 42em;
+        min-height: 1.6em;
+    }
+
+    .main-intro-typing {
+        min-height: 1.6em;
+    }
+
+    .typing-cursor {
+        display: inline-block;
+        margin-left: 2px;
+        animation: blink 0.8s step-end infinite;
+        color: inherit;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
     }
 
     h1 {

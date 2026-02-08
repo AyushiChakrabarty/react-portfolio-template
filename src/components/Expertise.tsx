@@ -1,91 +1,159 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { faBrain, faWandMagicSparkles, faCloud, faCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+const programmingLabels = [
+  "Python",
+  "C++",
+  "Java",
+  "MySQL",
+  "MongoDB",
+  "R",
+  "MATLAB",
 ];
 
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+const mlLabels = [
+  "PyTorch",
+  "TensorFlow",
+  "Keras",
+  "Scikit-Learn",
+  "XGBoost",
+  "NumPy",
+  "Pandas",
+  "Matplotlib",
+  "Seaborn",
+  "OpenCV",
+  "GDAL",
+  "Rasterio",
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+const genAiLabels = [
+  "LangChain",
+  "LangGraph",
+  "OpenAI SDK",
+  "RAG",
+  "LlamaIndex",
+  "Pydantic",
+  "CrewAI",
+  "Ollama",
+  "Prompt Engineering",
+  "NLTK",
+  "spaCy",
+  "Hugging Face",
+  "Weaviate",
+  "ChromaDB",
+  "FAISS",
+];
+
+const cloudDevOpsLabels = [
+  "AWS",
+  "GCP",
+  "Azure",
+  "Azure Databricks",
+  "Docker",
+  "CI/CD",
+  "Git",
+  "Linux",
+  "Apache Spark",
+  "FastAPI",
+  "asyncio",
+];
+
+const softwareLabels = [
+  "HTML",
+  "CSS",
+  "Bootstrap",
+  "Streamlit",
+  "React",
+  "Django",
+  "Flask",
+  "Agile",
+  "Jira",
+];
+
+const hardwareLabels = [
+  "GPU Programming",
+  "Xilinx-Vitis",
+  "GROQ",
+  "Compression & Quantization",
 ];
 
 function Expertise() {
-    return (
+  return (
     <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+      <div className="skills-container">
+        <h1>Expertise</h1>
+        <div className="skills-grid">
+          <div className="skill">
+            <FontAwesomeIcon icon={faPython} size="3x" />
+            <h3>Programming</h3>
+            <p>Strong foundation in multiple languages for research, automation, and production systems.</p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {programmingLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
             </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faBrain} size="3x" />
+            <h3>Machine Learning & AI</h3>
+            <p>Building and deploying scalable ML systems—from classical models to deep learning and resource-efficient inference.</p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {mlLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faWandMagicSparkles} size="3x" />
+            <h3>Generative AI, NLP & Agents</h3>
+            <p>Fine-tuning LLMs, RAG pipelines, multi-agent systems, and AI-powered tools with LangChain, LangGraph, and OpenAI.</p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {genAiLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faCloud} size="3x" />
+            <h3>Data, Cloud & DevOps</h3>
+            <p>End-to-end pipelines, visualization, and deployment on AWS, GCP, and Azure with Docker and CI/CD. Hardware optimization for edge and low-resource deployment.</p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {cloudDevOpsLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+              {hardwareLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faCode} size="3x" />
+            <h3>Software Development</h3>
+            <p>Full-stack and rapid prototyping with Streamlit, web technologies, and agile methodologies.</p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {softwareLabels.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Expertise;
