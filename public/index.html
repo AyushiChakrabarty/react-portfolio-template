@@ -28,6 +28,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Ayushi Chakrabarty</title>
+    <script>
+      (function() {
+        try {
+          var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+          var fromCache = nav && nav.transferSize === 0;
+          var hasBust = /[?&]_t=/.test(location.search);
+          if (fromCache && !hasBust) {
+            var sep = location.search ? '&' : '?';
+            location.replace(location.pathname + location.search + sep + '_t=' + Date.now());
+            return;
+          }
+          if (hasBust) {
+            var clean = location.search.replace(/[?&]_t=\d+/g, '').replace(/^&/, '?').replace(/\?$/, '');
+            history.replaceState(null, '', location.pathname + clean);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
