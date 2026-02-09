@@ -20,7 +20,7 @@ function Timeline() {
             iconStyle={{ background: '#0d1116', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Machine Learning Engineer (Affiliate)</h3>
+            <h3 className="vertical-timeline-element-title">Data Analyst / MLE (Affiliate)</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
             <p>Building vision-based ML systems with retrieval and multi-agent pipelines to automatically grade and correct open-ended handwritten and visual math responses at scale.</p>
           </VerticalTimelineElement>
@@ -33,9 +33,9 @@ function Timeline() {
             iconStyle={{ background: '#0d1116', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Startup Founder (Create-X)</h3>
+            <h3 className="vertical-timeline-element-title">Startup Founder</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Launched an AI platform for privacy-first analysis of open-ended survey feedback. Shipped end-to-end ML pipelines that cut analysis from weeks to minutes; validated with 30+ customer interviews and 1,500+ at Create-X Demo Day.</p>
+            <p>Launched an AI platform for privacy-first analysis of open-ended survey feedback. Developed end-to-end ML pipelines that cut analysis from weeks to minutes; validated with 30+ customer interviews and 1,500+ attendees at Create-X Demo Day.</p>
             <p>Won 1st prize at CRIDC 2025 Innovation Competition and advanced to Quadrant-I Startup Launch with $10K in funding and external grants (including Georgia Research Alliance and Georgia AI for Manufacturing); filed a provisional patent.</p>
           </VerticalTimelineElement>
 
@@ -49,7 +49,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Generative AI Researcher (Team Lead)</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Led work on resource-efficient diffusion models, cutting VRAM from 16GB+ to 8GB so low-resource labs could run state-of-the-art generative models.</p>
+            <p>Led work on resource-efficient diffusion models, cutting VRAM from 16GB+ to 8GB so low-resource labs could run state-of-the-art generative models for nanophotonics research.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -62,7 +62,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">NLP Project Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Shipped an NLP service for real-time survey categorization. Halved processing time for 2K+ students and cut false positives by ~20% through iterative feedback.</p>
+            <p>Developed an NLP service for real-time survey categorization. Halved processing time for 2K+ student records and cut false positives by ~20%, with an easy-to-use Streamlit frontend.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
